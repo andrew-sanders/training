@@ -1,0 +1,10 @@
+#!/bin/bash
+
+#find /data/web_content -mindepth 0 -maxdepth 2 -type d > ~results.txt
+
+> ~/results.txt
+
+for dir in "/data/web_content"
+do
+    find "$dir" -mindepth 0 -maxdepth 2 -type d >> ~/results.txt
+done
