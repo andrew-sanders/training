@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Macondo&display=swap');
+
+body {
+    background-color: #eaeff1;
+    font-family: "Macondo", cursive;
+}
+
+img {
+    width: 100%;
+    border-radius: 12px;
+    height: 214px;
+    object-fit: cover;
+    box-shadow: -2px 2px 9px 0px rgba(164, 175, 187, 1);
+}
+
+#container {
+    max-width: 300px;
+    margin: 0 auto;
+    margin-top: 20vh;
+}
+
+.card {
+    background-color: white;
+    border: 1px solid #bacdd8;
+    padding: 8px;
+    border-radius: 12px;
+    box-shadow: -3px 3px 9px 0px rgba(164, 175, 187, 1);
+}
+
+.tag {
+    padding: 4px 8px;
+    border: 1px solid #e5eaed;
+    border-radius: 50px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #788697;
+    box-shadow: -1px 1px 5px 0px rgb(164, 175, 187);
+    transition: all .1s ease-in-out; 
+    display: inline-block;
+}
+
+.tag:hover {
+    transform: scale(1.05);
+    text-decoration: underline;
+}
+
+.name {
+    font-size: 24px;
+    font-weight: 600;
+    margin-top: 16px;
+}
+
+.card_details > p {
+    font-size: 14px;
+    color: #7f8c9b;
+    line-height: 150%;
+}
+
+.card_details > button {
+    border: none;
+    padding: 12px 24px;
+    border-radius: 50px;
+    font-weight: 600;
+    color: #ffffff;
+    background-color: #534138;
+    margin: 0 auto;
+    display: block;
+    cursor: pointer;
+    box-shadow: -1px 1px 5px 0px rgb(164, 175, 187);
+    transition: all .1s ease-in-out; 
+    font-family: "Macondo", cursive;
+}
+
+.card_details > button:hover {
+    transform: scale(1.05);
+}
+
+.card_details {
+    padding: 16px 8px 8px 8px;
+}
