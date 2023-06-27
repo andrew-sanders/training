@@ -1,0 +1,37 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: forestgreen;
+    flex-direction: column;
+}
+
+img {
+    height: 30vh;
+    width: 30vh;
+}
+
+.border {
+    background-color: black;
+    padding: 45px;
+}
+
+.padding {
+    background-color: blanchedalmond;
+    padding: 45px;
+}
+
+.content {
+    background-color: crimson;
+    padding: 45px;
+    font-size: 78px;
+}
+
+#inputs {
+    display: flex;
+    flex-direction: row;
+}
+
+#sliders {
+    margin-right: 30px;
+}
