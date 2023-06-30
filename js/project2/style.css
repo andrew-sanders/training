@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Macondo&family=Press+Start+2P&display=swap');
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #161a16;
+    color: whitesmoke;
+    font-family: 'Press Start 2P', cursive;    
+}
+
+p {
+    text-align: center;
+}
+
+sub {
+    text-align: center;
+}
+
+button {
+    background: none;
+    color: whitesmoke;
+    font-family: 'Press Start 2P', cursive;
+    border: none;
+    padding: 2px;
+    transition: all 0.05s ease-in;
+    cursor: pointer;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+.button-border {
+    border: 2px solid whitesmoke;
+}
+
+.info {
+    text-align: center;
+    line-height: 22px;
+    font-size: 14px;
+}
+
+input[type="checkbox"] {
+    opacity: 0;
+    position: absolute;
+    height: 0;
+    width: 0;
+}
+
+.checkbox {
+    display: inline-block;
+    height: 12px;
+    width: 12px;
+    border: 2px dashed whitesmoke;
+}
+
+.checkbox:hover {
+    background: whitesmoke;
+}
+
+.checked {
+    background: whitesmoke;
+}
+
+.arrow {
+    padding: 30px;
+}
+
+.arrow > img {
+    transition: all .1s ease-in-out; 
+}
+
+.arrow > img:hover {
+    transform: scale(1.15);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 93vh;
+    width: 60vw;
+    padding: 20px 20px 20px 20px;
+    border-radius: 5px;
+    background-color: #19211a;
+    overflow: auto;
+}
+
+.container > * {
+    animation: fadeIn 0.5s;
+    transition: all .1s ease-in-out;
+    
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.visible {
+    visibility: visible;
+}
+
+.class-info {
+    padding-left: 7.5%;
+    padding-right: 7.5%;
+    text-align: center;
+    font-size: 12px;
+    line-height: 24px;
+}
+
+.ability-card {
+    text-align: center;
+    padding-right: 15px;
+}
+
+.ability-card > h3:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#ability-info {
+    text-align: center;
+    font-size: 12px;
+    line-height: 24px;
+}
+
+label:hover {
+    text-decoration: underline;
+}
+
+.centered-mid {
+    text-align: center;
+    width: 50%;
+}
+
+.left-wide {
+    text-align: left;
+    width: 66%;
+}
+
+@media (max-width: 1000px) {
+    .container {
+        align-items: flex-start !important;
+    }
+}

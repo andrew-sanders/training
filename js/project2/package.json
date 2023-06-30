@@ -1,0 +1,19 @@
+{
+  "name": "wizard_builder",
+  "version": "1.0.0",
+  "description": "5e Wizard Builder",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andrew-sanders/training.git#main"
+  },
+  "author": "Andrew Sanders",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andrew-sanders/training/issues"
+  },
+  "homepage": "https://github.com/andrew-sanders/training/tree/main#readme"
+}
