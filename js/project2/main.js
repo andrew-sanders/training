@@ -1,5 +1,5 @@
 /*
-    Code organization: 2/10
+    Code organization: 6.5/10
 */
 
 import spells from "./scripts/spellGet.js";
@@ -113,8 +113,8 @@ function renderPageOne() {
             <button id="nameInput" class="button-border">Submit</button><span id="success" class="hidden"> Saved!</span>
         </div>
         `
-    // Name updater (using let for rebuilding elements)
-    let nameInput = document.querySelector("#nameInput");
+    // Name Updater
+    const nameInput = document.querySelector("#nameInput");
     function renderNameUpdater() {
         nameInput.addEventListener("click", () => {
             const nameText = document.querySelector("#nameText");
@@ -329,14 +329,8 @@ function renderPageFive(spells) {
     if (spellTotal < 1) {
         spellTotal = 1;
     }
-    spellCount.innerHTML = spellTotal;
-    /*
-        Expected functionality:
-            1. sort by level
-            2. sort by school of magic
-            3. modal with api data loaded on click
-    */
 
+    spellCount.innerHTML = spellTotal;
     const cantrips = document.querySelector("#cantrips");
     const levelOne = document.querySelector("#level-one");
     for (let i = 0; i < spells.length; i++){

@@ -31,6 +31,10 @@ button:hover {
     transform: scale(1.1);
 }
 
+table {
+    min-width: 600px;
+}
+
 .button-border {
     border: 2px solid whitesmoke;
 }
