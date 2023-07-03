@@ -1,5 +1,6 @@
 /*
     Code organization: 6.5/10
+    Code readability: 5/10
 */
 
 import spells from "./scripts/spellGet.js";
@@ -72,7 +73,6 @@ right.ondragstart = () => {
     return false;
 }; 
 
-
 function build(page) {
     container.innerHTML = "";
     if (page === 1) {
@@ -115,15 +115,12 @@ function renderPageOne() {
         `
     // Name Updater
     const nameInput = document.querySelector("#nameInput");
-    function renderNameUpdater() {
-        nameInput.addEventListener("click", () => {
-            const nameText = document.querySelector("#nameText");
-            const successText = document.querySelector("#success");
-            character.name = nameText.value;
-            successText.classList.add("visible");
-        });
-}
-    renderNameUpdater();
+    nameInput.addEventListener("click", () => {
+        const nameText = document.querySelector("#nameText");
+        const successText = document.querySelector("#success");
+        character.name = nameText.value;
+        successText.classList.add("visible");
+    });
 }
 
 function renderPageTwo() {
@@ -204,7 +201,6 @@ function renderPageTwo() {
     async function loadStatInfo(stat) {
         document.querySelector(`#${stat} h3`).addEventListener("click", async () => {
             let ability = await queryAPI("ability-scores", `${stat}`);
-            console.log(Object.keys(ability));
             abilityInfo.innerHTML = ability.desc[0] + " " + ability.desc[1];
         })
     }
@@ -293,7 +289,7 @@ function renderPageFour() {
                     if (character.skills[i] === item.id) {
                         let temp = character.skills[profs-1];
                         character.skills[profs-1] = character.skills[i];
-                        character.skills[i] = temp
+                        character.skills[i] = temp;
                     }
                 }
                 character.skills.pop(); // leaves undefined value when popping with 1 element in the array
@@ -307,8 +303,6 @@ function renderPageFour() {
                 character.skills.push(item.id)
                 item.classList.add("checked");
                 profs++;
-            } else {
-                item.checked = false;
             }
         })
     })
@@ -435,7 +429,7 @@ function renderPageSix(spells) {
     <h3><u>Skill Proficiencies</u></h3>
     <table id="skills">
     </table>
-    <p>Spells</p>
+    <h3><u>Spells</u></h3>
     <table id="spells">
         <tr>
             <td>Level</td>
@@ -497,6 +491,7 @@ function renderPageSix(spells) {
 
     renderSpells();
 
+    // make this a function
     const schools = document.querySelectorAll(".school");
     schools.forEach((item) => {
         if (item.innerHTML === "Conjuration") {
