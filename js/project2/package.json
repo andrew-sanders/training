@@ -4,7 +4,8 @@
   "description": "5e Wizard Builder",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "curl -X GET \"https://www.dnd5eapi.co/api/spells/fireball\" -H \"accept: application/json\" && echo \n",
+    "start": "npx live-server"
   },
   "repository": {
     "type": "git",
