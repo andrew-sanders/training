@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angular Training</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        /* These colors are stolen from the Diablo II wiki styling guide. */
+        .evil {
+            background-color: #2F0600;
+            color: #D49E43;
+        }
+
+        .evil-list {
+            background-color: #0A0101;
+            color: #A59263;
+        }
+
+        .evil-entry {
+            background-color: #5E0C00;
+            color: 	#A59263;
+        }
+
+        .evil-btn {
+            background-color: #FFA500;
+            color: #0A0101;
+        }
+
+    </style>
+</head>
+<body>
+    <div ng-app="myShoppingList" ng-cloak ng-controller="myCtrl" class="w3-card-2 w3-margin" style="max-width: 400px">
+        <header class="w3-container evil w3-padding-16">
+            <h3>SHOPPPINGG!</h3>
+        </header> 
+        <ul class="w3-ul">
+            <li ng-repeat="x in products" class="w3-padding-16 evil-list">{{x}}<span ng-click="removeItem($index)" class="w3-right w3-margin-right" style="cursor: pointer">&times;</span></li>
+        </ul>
+        <div class="w3-container evil w3-padding-16">
+            <div class="w3-row w3-margin-top">
+                <div class="w3-col s10">
+                    <input ng-model="addMe" placeholder="Add shopping items here" class="w3-input w3-border w3-padding evil-entry">
+                </div>
+                <button ng-click="addItem()" class="w3-btn w3-padding evil-btn">Add</button>
+            </div>
+        </div>
+        <p class="w3-text-red">{{errorText}}</p>
+    </div>
+    
+<script>
+    let app = angular.module('myShoppingList', []);
+    app.controller('myCtrl', ($scope) => {
+        $scope.products = ["Beer", "Bread", "Cheese"];
+        $scope.addItem = () => {
+            $scope.errorText = "";
+            if (!$scope.addMe) { return; }
+            if ($scope.products.indexOf($scope.addMe) == -1) {
+                $scope.products.push($scope.addMe); 
+            } else {
+                $scope.errorText = "The item is already on your shopping list."
+            }
+        }
+        $scope.removeItem = (x) => { $scope.products.splice(x, 1); }
+    });
+</script>
+</body>
+</html>
